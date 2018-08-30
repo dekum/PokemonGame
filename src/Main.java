@@ -43,7 +43,7 @@ public class Main {
         System.out.println("Blue sends out " + P2Pkmn1.getName() +"!");
         System.out.println("Go " + P1Pkmn1.getName()+ "!");
         BattleSituation bat1 = new BattleSituation(P1Pkmn1, P2Pkmn1);
-
+        //Cbange
 
 
 
