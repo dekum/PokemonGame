@@ -6,8 +6,24 @@ public class Pkmn {
     private int atk;
     private int def;
     private int PkmnID;
-    ;
+    private String[] PkmnOrderNo = new String[3];
 
+
+    public int getPkmnID() {
+        return PkmnID;
+    }
+
+    public void setPkmnID(int pkmnID) {
+        PkmnID = pkmnID;
+    }
+
+    public String[] getPkmnOrderNo() {
+        return PkmnOrderNo;
+    }
+
+    public void setPkmnOrderNo(String name,int id) {
+        PkmnOrderNo[id] = name;
+    }
 
     public String getName() {
         return name;
