@@ -3,9 +3,8 @@ import java.util.InputMismatchException;;
 public class BattleMenu {
 
 
-    BattleMenu(Pkmn P1, Pkmn P2) {
+    BattleMenu(Pkmn  P1, Pkmn  P2) {
 //Print out Insrtuctiosn for player to do
-
         System.out.println("1.Fight\n" +
                 "2.Pkmn\n" +
                 "3.Bag\n" +

@@ -20,34 +20,69 @@ import java.util.InputMismatchException;
 public class Main {
 
     public static void main(String[] args) {
-
-
-
-        System.out.println("Hello World!");
         //Opening open1 = new Opening();
 
+        Player P1 = new Player("Red","Trainer", 14);
+        Player P2 = new Player("Blue","Master Trainer",15);
 
-        Pkmn P1Pkmn1 = new Pkmn("Pikachu", "Electric", 200, 25, 15);
-        Pkmn Pkmn2 = new Pkmn("Charmander", "Fire", 70, 40, 20);
-        Pkmn P2Pkmn1 = new Pkmn("Squirtle", "Water", 220, 25, 30);
 
+
+        Pkmn createPkmn = new Pkmn("Pikachu", "Electric", 200, 25, 15);
+        P1.setPkmnList(createPkmn,1);
+        createPkmn = new Pkmn("Charmander", "Fire", 123, 54, 29); //think about adding a number at the end of createPkmn
+        P1.setPkmnList(createPkmn,2);
+
+         createPkmn = new Pkmn("Squirtle", "Water", 220, 25, 30);
+        P2.setPkmnList(createPkmn,1);
+         createPkmn = new Pkmn("Geodude", "Rock", 220, 25, 30);
+        P2.setPkmnList(createPkmn,2);
+
+
+
+        Pkmn Pokemon1 = P1.getPkmnList(1);
+
+
+        System.out.println("Name:"+P1.getName() +" Class: "+P1.getTrainerClass()+ " Age: " + P1.getAge());
         //Print out pokemon Info
-        System.out.println("Your current Pkmn is: "+ P1Pkmn1.getName() +" Type: " + P1Pkmn1.getType() + "\nCurrent HP = " +
-                P1Pkmn1.getHP() + " ATK = " + P1Pkmn1.getAtk()+ " DEF = " + P1Pkmn1.getDef() );
-        System.out.println("Enemy current Pkmn is: "+ P2Pkmn1.getName() +" Type: " + P2Pkmn1.getType() + "\nCurrent HP = " +
-                P2Pkmn1.getHP() + " ATK = " + P2Pkmn1.getAtk()+ " DEF = " + P2Pkmn1.getDef() );
+        System.out.println("Your current Pkmn is: "+ Pokemon1.getName() +" Type: " + Pokemon1.getType() + "\nCurrent HP = " +
+                Pokemon1.getHP() + " ATK = " + Pokemon1.getAtk()+ " DEF = " + Pokemon1.getDef() );
+
+
+        Pokemon1.setHP(24);
+        Pokemon1.setAtk(2);
+        Pokemon1.setDef(-2);
+        Pokemon1.setName("PikaLame");
+        Pokemon1.setType("Lame Type");
+        P1.setPkmnList(Pokemon1,1);
+        Pokemon1= P1.getPkmnList(1);
+        System.out.println("Your current Pkmn is: "+ Pokemon1.getName() +" Type: " + Pokemon1.getType() + "\nCurrent HP = " +
+                Pokemon1.getHP() + " ATK = " + Pokemon1.getAtk()+ " DEF = " + Pokemon1.getDef() );
+
+        Pokemon1 = P1.getPkmnList(2);
+        System.out.println("Your other Pkmn is: "+ Pokemon1.getName() +" Type: " + Pokemon1.getType() + "\nCurrent HP = " +
+                Pokemon1.getHP() + " ATK = " + Pokemon1.getAtk()+ " DEF = " + Pokemon1.getDef() );
+
+        Pkmn Pokemon2 = P2.getPkmnList(1);
+
+        System.out.println("Enemy current Pkmn is: "+ Pokemon2.getName() +" Type: " + Pokemon2.getType() + "\nCurrent HP = " +
+                Pokemon2.getHP() + " ATK = " + Pokemon2.getAtk()+ " DEF = " + Pokemon2.getDef() );
+
+        Pokemon2 = P2.getPkmnList(2);
+
+        System.out.println("Enemy current Pkmn is: "+ Pokemon2.getName() +" Type: " + Pokemon2.getType() + "\nCurrent HP = " +
+                Pokemon2.getHP() + " ATK = " + Pokemon2.getAtk()+ " DEF = " + Pokemon2.getDef() );
 
 
 
         System.out.println("Blue wants to fight!");
-        System.out.println("Blue sends out " + P2Pkmn1.getName() +"!");
-        System.out.println("Go " + P1Pkmn1.getName()+ "!");
-        BattleSituation bat1 = new BattleSituation(P1Pkmn1, P2Pkmn1);
+        System.out.println("Blue sends out " + Pokemon2.getName() +"!");
+        System.out.println("Go " + Pokemon1.getName()+ "!");
+        //BattleSituation bat1 = new BattleSituation(P1, P2);
         //Cbange
 
 
 
-        //BattleMenu menu1 = new BattleMenu(P1Pkmn1, P2Pkmn1);
+        //BattleMenu menu1 = new BattleMenu(P1,P2);
 
 
 
