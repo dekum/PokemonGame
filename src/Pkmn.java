@@ -1,13 +1,35 @@
 public class Pkmn {
     private String name;
     private String type;
+    private String Species;
     private int HP;
     private int HPMax;
     private int atk;
     private int def;
-    private int PkmnID;
-    ;
+    private PkmnMove[] pkmnMoveList = new PkmnMove[4];
 
+    public String getSpecies() {
+        return Species;
+    }
+
+    public void setSpecies(String species) {
+        Species = species;
+    }
+
+
+    public void showPkmnMoveList() {
+        for (int i =0; i<4; i++)
+        {
+
+            System.out.println(i+". "+ pkmnMoveList[i].getName());
+
+        }
+
+    }
+
+    public void setPkmnMoveList(PkmnMove[] pkmnMoveList) {
+        this.pkmnMoveList = pkmnMoveList;
+    }
 
     public String getName() {
         return name;
@@ -54,17 +76,20 @@ public class Pkmn {
 
 
 
-    Pkmn(){
 
-    }
 
-    Pkmn(String n, String t, int h, int a, int d){
-        name= n;
-        type = t;
-        HP = h;
-        HPMax = h;
-        atk = a;
-        def = d;
+    Pkmn(String name, String type, int HP, int ATK, int DEF, String species){
+        this.name= name;
+        this.type = type;
+        this.HP = HP;
+        this.HPMax = HP;
+        this.atk = ATK;
+        this.def = DEF;
+        PkmnMove fakemove = new PkmnMove("In Pkmn I exist before calling registry");
+        pkmnMoveList[0]= fakemove;
+        System.out.println(fakemove.getName());
+        PkmnRegistry registry = new PkmnRegistry(species,pkmnMoveList);
+
 
     }
 

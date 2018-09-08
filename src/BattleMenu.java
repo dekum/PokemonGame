@@ -3,7 +3,7 @@ import java.util.InputMismatchException;;
 public class BattleMenu {
 
 
-    BattleMenu(Pkmn  P1, Pkmn  P2) {
+    BattleMenu(Player P1,Player P2) {
 //Print out Insrtuctiosn for player to do
         System.out.println("1.Fight\n" +
                 "2.Pkmn\n" +
@@ -18,6 +18,9 @@ public class BattleMenu {
 //System.out.println(input1);
 //Validate
 
+
+        Pkmn pokemon1= P1.getCurrentPkmn();
+        Pkmn pokemon2 = P2.getCurrentPkmn();
         ValidateIntInput valid1 = new ValidateIntInput();
         int userInput = valid1.getValue();
         boolean p1Turn = true;
@@ -26,7 +29,7 @@ public class BattleMenu {
             {
                 //Fight Menu
                 boolean keepMenu = true;
-                while (keepMenu == true) //P2.getHP() > 1 former conditon
+                while (keepMenu == true) //pokemon2.getHP() > 1 former conditon
                     {
 
                         System.out.println("Fight");
@@ -43,11 +46,11 @@ public class BattleMenu {
                         //(Attack power + Damagne power(*2 for weakness)) - (def/20
 
                         //Using tackle attack value 10
-                            System.out.println(P1.getName() + " uses Tackle! ");
-                            CalculateDamange calc1 = new CalculateDamange(P1, P2, 10, 1);
-//                            System.out.println(
-//                                    "Damange = " + calc1.getDamange() + "Current HP " + P2.getHP() + " / " + P2
-//                                            .getHPMax());
+                            System.out.println(pokemon1.getName() + " uses Tackle! ");
+                            CalculateDamange calc1 = new CalculateDamange(pokemon1, pokemon2, 10, 1);
+                            System.out.println(
+                                    "Damange = " + calc1.getDamange() + "Current HP " + pokemon2.getHP() + " / " + pokemon2
+                                            .getHPMax());
                             keepMenu = false;
                         }
 
@@ -56,10 +59,10 @@ public class BattleMenu {
                         //(Attack power + Damagne power(*2 for weakness)) - (def/20
 
                         //Using tackle attack value 10
-                            System.out.println(P1.getName() + " uses Thunderstock! ");
-                            CalculateDamange calc1 = new CalculateDamange(P1, P2, 15, 2);
+                            System.out.println(pokemon1.getName() + " uses Thunderstock! ");
+                            CalculateDamange calc1 = new CalculateDamange(pokemon1, pokemon2, 15, 2);
                             //System.out.println(
-                            //        "Damange = " + calc1.getDamange() + "Current HP " + P2.getHP() + " / " + P2
+                            //        "Damange = " + calc1.getDamange() + "Current HP " + pokemon2.getHP() + " / " + pokemon2
                             //                .getHPMax());
                             keepMenu = false;
                         }
@@ -69,11 +72,11 @@ public class BattleMenu {
                             //(Attack power + Damagne power(*2 for weakness)) - (def/20
 
                             //Using tackle attack value 10
-                            System.out.println(P1.getName() + " uses Irontail! ");
-                            CalculateDamange calc1 = new CalculateDamange(P1, P2, 5, 1);
-                            P1.setDef(P1.getDef() + 3);
+                            System.out.println(pokemon1.getName() + " uses Irontail! ");
+                            CalculateDamange calc1 = new CalculateDamange(pokemon1, pokemon2, 5, 1);
+                            pokemon1.setDef(pokemon1.getDef() + 3);
 //                            System.out.println(
-//                                    "Damange = " + calc1.getDamange() + "Current HP " + P2.getHP() + " / " + P2
+//                                    "Damange = " + calc1.getDamange() + "Current HP " + pokemon2.getHP() + " / " + pokemon2
 //                                            .getHPMax());
                             keepMenu = false;
                         }
@@ -83,10 +86,10 @@ public class BattleMenu {
                             //(Attack power + Damagne power(*2 for weakness)) - (def/20
 
                             //Using tackle attack value 10
-                            System.out.println(P1.getName() + " uses Thunder! ");
-                            CalculateDamange calc1 = new CalculateDamange(P1, P2, 30, 2);
+                            System.out.println(pokemon1.getName() + " uses Thunder! ");
+                            CalculateDamange calc1 = new CalculateDamange(pokemon1, pokemon2, 30, 2);
 //                            System.out.println(
-//                                    "Damange = " + calc1.getDamange() + "Current HP " + P2.getHP() + " / " + P2
+//                                    "Damange = " + calc1.getDamange() + "Current HP " + pokemon2.getHP() + " / " + pokemon2
 //                                            .getHPMax());
                             keepMenu = false;
                         }
@@ -105,7 +108,7 @@ public class BattleMenu {
             }
         //Here would be post attack code?
         //Start enemy turn
-        if(P2.getHP() <= 0)
+        if(pokemon2.getHP() <= 0)
         {
             System.out.println("End of battle you win!");
             System.exit(0);

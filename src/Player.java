@@ -2,7 +2,7 @@ public class Player {
     private String name;
     private String trainerClass;
     private int age;
-    private Pkmn[] Pkmnlist = new Pkmn[3];
+    private Pkmn[] Pkmnlist = new Pkmn[3];//Should be 2 but w/e
     private Pkmn currentPkmn;
 
     public Pkmn getCurrentPkmn() {
