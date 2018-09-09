@@ -43,10 +43,6 @@ public class PkmnMove {
             this.atkVal = atkVal;
 
         }
-    PkmnMove(String deleteme){
-        name=deleteme;
-
-    }
 
     }
 

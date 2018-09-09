@@ -1,7 +1,7 @@
 public class Pkmn {
     private String name;
     private String type;
-    private String Species;
+    private String species;
     private int HP;
     private int HPMax;
     private int atk;
@@ -9,11 +9,11 @@ public class Pkmn {
     private PkmnMove[] pkmnMoveList = new PkmnMove[4];
 
     public String getSpecies() {
-        return Species;
+        return species;
     }
 
     public void setSpecies(String species) {
-        Species = species;
+        species = species;
     }
 
 
@@ -85,7 +85,7 @@ public class Pkmn {
         this.HPMax = HP;
         this.atk = ATK;
         this.def = DEF;
-
+        this.species = species;
         PkmnRegistry registry = new PkmnRegistry(species,pkmnMoveList);
 
 

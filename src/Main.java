@@ -31,6 +31,18 @@ public class Main {
         Pkmn Pokemon1 = P1.getPkmnList(1);
         Pokemon1.showPkmnMoveList();
 
+        System.out.println("PLayer 2 turn");
+
+        createPkmn = new Pkmn("Squirtle", "Water", 220, 25, 30,"Squirtle");
+        P2.setPkmnList(createPkmn,1);
+
+
+
+        Pkmn Pokemon2 = P2.getPkmnList(1);
+        Pokemon2.showPkmnMoveList();
+
+
+
         System.exit(0);
 
         createPkmn = new Pkmn("Charmander", "Fire", 123, 54, 29,"Charmander"); //think about adding a number at the end of createPkmn
@@ -38,8 +50,7 @@ public class Main {
         createPkmn = new Pkmn("Charma3nder", "Fire", 123, 54, 29,"Charmander"); //think about adding a number at the end of createPkmn
         P1.setPkmnList(createPkmn,3);
 
-         createPkmn = new Pkmn("Squirtle", "Water", 220, 25, 30,"Squirtle");
-        P2.setPkmnList(createPkmn,1);
+
          createPkmn = new Pkmn("Geodude", "Rock", 420, 42, 39,"Geodude");
         P2.setPkmnList(createPkmn,2);
 
@@ -71,7 +82,7 @@ public class Main {
         System.out.println("Your other Pkmn is: "+ Pokemon1.getName() +" Type: " + Pokemon1.getType() + "\nCurrent HP = " +
                 Pokemon1.getHP() + " ATK = " + Pokemon1.getAtk()+ " DEF = " + Pokemon1.getDef() );
 
-        Pkmn Pokemon2 = P2.getPkmnList(1);
+
 
         System.out.println("Enemy current Pkmn is: "+ Pokemon2.getName() +" Type: " + Pokemon2.getType() + "\nCurrent HP = " +
                 Pokemon2.getHP() + " ATK = " + Pokemon2.getAtk()+ " DEF = " + Pokemon2.getDef() );
