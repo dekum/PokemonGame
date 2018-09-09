@@ -7,9 +7,7 @@ public class PkmnRegistry {
         if (species == "Pikachu")
         {
             //Sent Tackle
-            System.out.println(pkmnMoveList[0].getName() );
-            pkmnMoveList[0].setName("In Pkmn Registry start");
-            System.out.println(pkmnMoveList[0].getName() );
+
             PkmnMoveRegistry reg1 = new PkmnMoveRegistry();
             pkmnMoveList[0] = reg1.getPkmnMove("Tackle");
             //Send Thunderbolt
@@ -18,8 +16,13 @@ public class PkmnRegistry {
             //Send Iron Tail to the registry, store PkmnMove in PkmnMove List array
             pkmnMoveList[2] = reg1.getPkmnMove("Iron Tail");
             //Send Thunder
+            pkmnMoveList[3] = reg1.getPkmnMove("Thunder");
             //pkmnMoveList[3] = reg1.getPkmnMove("Thunder");
+            System.out.println(pkmnMoveList[0].getName() +"Should be tackle" );
+            System.out.println(pkmnMoveList[1].getName() +"Should be thundrebolt" );
 
+            pkmnMoveList[0].setName("End of Registry");
+            System.out.println(pkmnMoveList[0].getName() );
         }
 
 

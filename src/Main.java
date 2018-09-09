@@ -25,10 +25,14 @@ public class Main {
         Player P1 = new Player("Red","Trainer", 14);
         Player P2 = new Player("Blue","Master Trainer",15);
 
-
-
         Pkmn createPkmn = new Pkmn("Pikachu", "Electric", 200, 25, 15,"Pikachu");
         P1.setPkmnList(createPkmn,1);
+
+        Pkmn Pokemon1 = P1.getPkmnList(1);
+        Pokemon1.showPkmnMoveList();
+
+        System.exit(0);
+
         createPkmn = new Pkmn("Charmander", "Fire", 123, 54, 29,"Charmander"); //think about adding a number at the end of createPkmn
         P1.setPkmnList(createPkmn,2);
         createPkmn = new Pkmn("Charma3nder", "Fire", 123, 54, 29,"Charmander"); //think about adding a number at the end of createPkmn
@@ -41,7 +45,7 @@ public class Main {
 
 
 
-        Pkmn Pokemon1 = P1.getPkmnList(1);
+        Pokemon1 = P1.getPkmnList(1);
 
         for (int i = 1 ; i<3; i++)
         {

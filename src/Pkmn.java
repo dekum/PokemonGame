@@ -85,10 +85,9 @@ public class Pkmn {
         this.HPMax = HP;
         this.atk = ATK;
         this.def = DEF;
-        PkmnMove fakemove = new PkmnMove("In Pkmn I exist before calling registry");
-        pkmnMoveList[0]= fakemove;
-        System.out.println(fakemove.getName());
+
         PkmnRegistry registry = new PkmnRegistry(species,pkmnMoveList);
+
 
 
     }

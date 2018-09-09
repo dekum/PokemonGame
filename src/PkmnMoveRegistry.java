@@ -17,11 +17,22 @@ public class PkmnMoveRegistry {
         }
         if (moveName == "Thunderbolt") {
 
-            move1 = new PkmnMove("Tackle", "Normal", 10, "None");
+            move1 = new PkmnMove("Thunderbolt", "Normal", 15, "None");
+
+        }
+        if (moveName == "Iron Tail") {
+
+            move1 = new PkmnMove("Iron Tail", "Steel", 5, "+10 Defense");
+
+        }
+        if (moveName == "Thunder") {
+
+            move1 = new PkmnMove("Thunder", "Electric", 20, "None");
 
         }
 
         return move1;
+
     }
 
 
