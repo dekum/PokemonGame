@@ -28,12 +28,12 @@ public class Main {
         Pkmn createPkmn = new Pkmn("Pikachu", "Electric", 200, 25, 15,"Pikachu");
         P1.setPkmnList(createPkmn,1);
 
-        Pkmn Pokemon1 = P1.getPkmnList(1);
-        Pokemon1.showPkmnMoveList(); //DELETE ME
+
+
 
         createPkmn = new Pkmn("Charmander", "Fire", 123, 54, 29,"Charmander"); //think about adding a number at the end of createPkmn
         P1.setPkmnList(createPkmn,2);
-        createPkmn = new Pkmn("Charma3nder", "Fire", 123, 54, 29,"Charmander"); //think about adding a number at the end of createPkmn
+        createPkmn = new Pkmn("Bulbasaur", "Fire", 123, 54, 29,"Bulbsaur"); //think about adding a number at the end of createPkmn
         P1.setPkmnList(createPkmn,3);
 
 
@@ -48,7 +48,7 @@ public class Main {
         P2.setPkmnList(createPkmn,2);
 
 
-
+        Pkmn Pokemon1 = P1.getPkmnList(1);
         System.out.println("Name:"+P1.getName() +" Class: "+P1.getTrainerClass()+ " Age: " + P1.getAge());
         //Print out pokemon Info
         System.out.println("Your current Pkmn is: "+ Pokemon1.getName() +" Type: " + Pokemon1.getType() + "\nCurrent HP = " +

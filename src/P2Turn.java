@@ -16,7 +16,7 @@ public class P2Turn {
         int randoomInt = random.nextInt(4) +1; //Random code includes 0 so range is 0,1,2,3 so I want to add 1 so range is 1 thru 4
 
         PkmnMove moveUsed = pokemon2.getPkmnMoveList(randoomInt);
-        //Tackle Attack
+
         System.out.println(pokemon2.getName() + " is using"+ moveUsed.getName()+ "!");
         CalculateDamange calc1 = new CalculateDamange(pokemon2,pokemon1, moveUsed,"none" );
 

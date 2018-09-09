@@ -13,9 +13,6 @@ public class BattleMenu {
                 "4.Run\n" +
                 "5.ReviewBattle\n");
 
-
-
-
         Pkmn pokemon1= P1.getCurrentPkmn();
         Pkmn pokemon2 = P2.getCurrentPkmn();
         ValidateIntInput valid1 = new ValidateIntInput();
