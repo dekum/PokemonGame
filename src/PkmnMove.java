@@ -41,6 +41,7 @@ public class PkmnMove {
             this.name= name;
             this.type = type;
             this.atkVal = atkVal;
+            this.specialAttribute = specialAttribute;
 
         }
 

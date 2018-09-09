@@ -45,4 +45,39 @@ public class ValidateIntInput {
         System.out.println("Your entry is:" + value);
 
     }
+    ValidateIntInput(int lowScopre, int highScope){
+
+
+
+        Scanner scanner = new Scanner(System.in);
+        value = -1500;
+        // set value initially to a number outside the range we want
+
+        // loop, while the value is below
+
+
+
+        while(value <lowScopre ||value>highScope  )
+        {
+            try{
+
+                System.out.print("Enter a number within the range:");
+                value = scanner.nextInt();
+            }
+
+            // if the user types in anything but an integer,
+            // it will 'throw' this 'exception'.
+            catch (InputMismatchException ime)
+            {
+                System.err.println("Incorrect entry.");
+                // clear the keyboard buffer
+                scanner.nextLine();
+            }
+        }
+
+        System.out.println("Your entry is:" + value);
+
+    }
+
+
 }

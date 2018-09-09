@@ -11,21 +11,15 @@ public class P2Turn {
         Pkmn pokemon1= P1.getCurrentPkmn();
         Pkmn pokemon2 = P2.getCurrentPkmn();
 
-        System.out.println(pokemon2.getName() + "is going to attack!");
+        System.out.println(pokemon2.getName() + " is going to attack!");
         Random random = new Random();
         int randoomInt = random.nextInt(4) +1; //Random code includes 0 so range is 0,1,2,3 so I want to add 1 so range is 1 thru 4
 
-        //Should make pokmn ID to make this easy but I know were using squrtle for test
-        randoomInt = 1;
-        if (randoomInt == 1)
-        {
-            //Tackle Attack
-            System.out.println(pokemon2.getName() + "is using Tackle!");
-            CalculateDamange calc1 = new CalculateDamange(pokemon2, pokemon1, 10, 1);
-            //So lets see how easy Java switches pokemon1 and P2 stats, could save alot of time
+        PkmnMove moveUsed = pokemon2.getPkmnMoveList(randoomInt);
+        //Tackle Attack
+        System.out.println(pokemon2.getName() + " is using"+ moveUsed.getName()+ "!");
+        CalculateDamange calc1 = new CalculateDamange(pokemon2,pokemon1, moveUsed,"none" );
 
-
-        }
 
         if(pokemon1.getHP() <= 0)
         {

@@ -3,7 +3,9 @@ import java.util.InputMismatchException;;
 public class BattleMenu {
 
 
+
     BattleMenu(Player P1,Player P2) {
+        PkmnMove moveUsed;
 //Print out Insrtuctiosn for player to do
         System.out.println("1.Fight\n" +
                 "2.Pkmn\n" +
@@ -11,12 +13,7 @@ public class BattleMenu {
                 "4.Run\n" +
                 "5.ReviewBattle\n");
 
-//Scanner input=new Scanner(System.in);
-//ystem.out.println("Pick a number to continue:");
-//int input1=input.nextInt();
-//ValidateIntInput val=new ValidateIntInput(input1,1,4);
-//System.out.println(input1);
-//Validate
+
 
 
         Pkmn pokemon1= P1.getCurrentPkmn();
@@ -34,65 +31,22 @@ public class BattleMenu {
 
                         System.out.println("Fight");
                         //Call Fight Menu
-                        System.out.println("1.Tackle\n" +
-                                "2.Thunderbolt\n" +
-                                "3.Iron Tail\n" +
-                                "4.Thunder\n" +
-                                "5.ReviewBattle\n");
-                        valid1 = new ValidateIntInput();
+                        pokemon1.showPkmnMoveList();
+                        //User chooses 1 thur 4
+                        //move 1
+                        // move 2
+                        //move 3
+                        //move 4
+                        valid1 = new ValidateIntInput(1,4);
                         userInput = valid1.getValue();
-                        if (userInput == 1) {
-                        //My Damange forumla for the example is simple
-                        //(Attack power + Damagne power(*2 for weakness)) - (def/20
 
-                        //Using tackle attack value 10
-                            System.out.println(pokemon1.getName() + " uses Tackle! ");
-                            CalculateDamange calc1 = new CalculateDamange(pokemon1, pokemon2, 10, 1);
-                            System.out.println(
-                                    "Damange = " + calc1.getDamange() + "Current HP " + pokemon2.getHP() + " / " + pokemon2
-                                            .getHPMax());
+
+                        moveUsed = pokemon1.getPkmnMoveList(userInput);
+                        System.out.println(pokemon1.getName() + " uses "+ moveUsed.getName() +"!" );
+                        CalculateDamange calc1 = new CalculateDamange(pokemon1,pokemon2,moveUsed,"none ");
+                        //System.out.println("Damange = " + calc1.getDamange() + "Current HP " + pokemon2.getHP() + " / " + pokemon2.getHPMax());
                             keepMenu = false;
-                        }
 
-                        if (userInput == 2) {
-                        //My Damange forumla for the example is simple
-                        //(Attack power + Damagne power(*2 for weakness)) - (def/20
-
-                        //Using tackle attack value 10
-                            System.out.println(pokemon1.getName() + " uses Thunderstock! ");
-                            CalculateDamange calc1 = new CalculateDamange(pokemon1, pokemon2, 15, 2);
-                            //System.out.println(
-                            //        "Damange = " + calc1.getDamange() + "Current HP " + pokemon2.getHP() + " / " + pokemon2
-                            //                .getHPMax());
-                            keepMenu = false;
-                        }
-
-                        if (userInput == 3) {
-                            //My Damange forumla for the example is simple
-                            //(Attack power + Damagne power(*2 for weakness)) - (def/20
-
-                            //Using tackle attack value 10
-                            System.out.println(pokemon1.getName() + " uses Irontail! ");
-                            CalculateDamange calc1 = new CalculateDamange(pokemon1, pokemon2, 5, 1);
-                            pokemon1.setDef(pokemon1.getDef() + 3);
-//                            System.out.println(
-//                                    "Damange = " + calc1.getDamange() + "Current HP " + pokemon2.getHP() + " / " + pokemon2
-//                                            .getHPMax());
-                            keepMenu = false;
-                        }
-
-                        if (userInput == 4) {
-                            //My Damange forumla for the example is simple
-                            //(Attack power + Damagne power(*2 for weakness)) - (def/20
-
-                            //Using tackle attack value 10
-                            System.out.println(pokemon1.getName() + " uses Thunder! ");
-                            CalculateDamange calc1 = new CalculateDamange(pokemon1, pokemon2, 30, 2);
-//                            System.out.println(
-//                                    "Damange = " + calc1.getDamange() + "Current HP " + pokemon2.getHP() + " / " + pokemon2
-//                                            .getHPMax());
-                            keepMenu = false;
-                        }
 
 
                     }

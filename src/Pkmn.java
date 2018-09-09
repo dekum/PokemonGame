@@ -21,7 +21,7 @@ public class Pkmn {
         for (int i =0; i<4; i++)
         {
 
-            System.out.println(i+". "+ pkmnMoveList[i].getName());
+            System.out.println((i+1)+". "+ pkmnMoveList[i].getName());
 
         }
 
@@ -29,6 +29,10 @@ public class Pkmn {
 
     public void setPkmnMoveList(PkmnMove[] pkmnMoveList) {
         this.pkmnMoveList = pkmnMoveList;
+    }
+
+    public PkmnMove getPkmnMoveList(int id) {
+        return pkmnMoveList[id-1];
     }
 
     public String getName() {
