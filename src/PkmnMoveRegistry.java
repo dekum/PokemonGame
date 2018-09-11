@@ -13,6 +13,24 @@ public class PkmnMoveRegistry {
 
         PkmnMove move1 = null;
 
+        if (moveName == "Ember") {
+
+            move1 = new PkmnMove("Ember", "Fire", 15, "None");
+
+        }
+        if (moveName == "Flamethrower") {
+
+            move1 = new PkmnMove("Flamethrower", "Fire", 35, "None");
+
+        }
+
+        if (moveName == "Iron Claw") {
+
+            move1 = new PkmnMove("Iron Claw", "Steel", 20, "None");
+
+        }
+
+
         if (moveName == "Iron Tail") {
 
             move1 = new PkmnMove("Iron Tail", "Steel", 5, "+10 Defense");

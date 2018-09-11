@@ -15,15 +15,15 @@ public class BattleMenu {
 
 
         while (p1Turn == true) {
-            System.out.println("1.Fight\n" +
+            System.out.println("\n\n1.Fight\n" +
                     "2.Pkmn\n" +
                     "3.Bag\n" +
                     "4.Run\n" +
                     "5.ReviewBattle\n");
 
             ValidateIntInput valid1 = new ValidateIntInput(1,4);
-            int userInput = valid1.getValue();
-            if (userInput == 1)
+            int userInput1 = valid1.getValue();
+            if (userInput1 == 1)
             {
                 //Fight Menu
                 boolean keepMenu = true;
@@ -39,10 +39,10 @@ public class BattleMenu {
                         //move 3
                         //move 4
                         valid1 = new ValidateIntInput(1,4);
-                        userInput = valid1.getValue();
+                        int userInput2 = valid1.getValue();
 
 
-                        moveUsed = pokemon1.getPkmnMoveList(userInput);
+                        moveUsed = pokemon1.getPkmnMoveList(userInput2);
                         System.out.println(pokemon1.getName() + " uses "+ moveUsed.getName() +"!" );
                         CalculateDamange calc1 = new CalculateDamange(pokemon1,pokemon2,moveUsed,"none ");
                         //System.out.println("Damange = " + calc1.getDamange() + "Current HP " + pokemon2.getHP() + " / " + pokemon2.getHPMax());
@@ -54,7 +54,7 @@ public class BattleMenu {
                  //Done battle now P1 turn should end
                 p1Turn = false;
                 }
-                    if(userInput == 2)
+                    if(userInput1 == 2)
                     {
                         //Change pokemon
                         ChangePkmn change1 = new ChangePkmn(P1);
@@ -63,7 +63,7 @@ public class BattleMenu {
                             System.out.println("I cancled");
 
                         }else if(change1.isCancel() == false){
-                        System.out.println("didn't cacnel");
+                        System.out.println("I didn't cancel");
                             p1Turn = false; //If there no cancel, end the turn and start P2 turn
                     }
 
@@ -83,10 +83,10 @@ public class BattleMenu {
 ////                        System.out.println( P1.getPkmnList(userInput).getName() + "recovers 100 HP! Current: "+ pokemon1.showHP());
 ////
 ////                    }
-                else if (userInput != 1) {
+                else if (userInput1 != 1) {
                 System.out.println("Sorry Option isn't available.");
                     valid1 = new ValidateIntInput();
-                userInput = valid1.getValue();
+                userInput1 = valid1.getValue();
                     }
 
             }

@@ -31,9 +31,9 @@ public class Main {
 
 
 
-        createPkmn = new Pkmn("Charmander", "Fire", 123, 54, 29,"Charmander"); //think about adding a number at the end of createPkmn
+        createPkmn = new Pkmn("Charmander", "Fire", 150, 34, 29,"Charmander"); //think about adding a number at the end of createPkmn
         P1.setPkmnList(createPkmn,2);
-        createPkmn = new Pkmn("Bulbasaur", "Fire", 123, 54, 29,"Bulbsaur"); //think about adding a number at the end of createPkmn
+        createPkmn = new Pkmn("Bulbasaur", "Fire", 123, 31, 29,"Bulbsaur"); //think about adding a number at the end of createPkmn
         P1.setPkmnList(createPkmn,3);
 
 

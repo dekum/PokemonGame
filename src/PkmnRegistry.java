@@ -43,6 +43,7 @@ public class PkmnRegistry {
             pkmnMoveList[2] = reg1.getPkmnMove("Iron Claw");
             //Send Thunder to the  registry, store PkmnMove in PkmnMove List array
             pkmnMoveList[3] = reg1.getPkmnMove("Flamethrower");
+            weaknesses.add("Water");
 
 
         }
