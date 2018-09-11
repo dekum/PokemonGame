@@ -7,18 +7,22 @@ public class BattleMenu {
     BattleMenu(Player P1,Player P2) {
         PkmnMove moveUsed;
 //Print out Insrtuctiosn for player to do
-        System.out.println("1.Fight\n" +
-                "2.Pkmn\n" +
-                "3.Bag\n" +
-                "4.Run\n" +
-                "5.ReviewBattle\n");
+
 
         Pkmn pokemon1= P1.getCurrentPkmn();
-        Pkmn pokemon2 = P2.getCurrentPkmn();
-        ValidateIntInput valid1 = new ValidateIntInput();
-        int userInput = valid1.getValue();
         boolean p1Turn = true;
+        Pkmn pokemon2 = P2.getCurrentPkmn();
+
+
         while (p1Turn == true) {
+            System.out.println("1.Fight\n" +
+                    "2.Pkmn\n" +
+                    "3.Bag\n" +
+                    "4.Run\n" +
+                    "5.ReviewBattle\n");
+
+            ValidateIntInput valid1 = new ValidateIntInput(1,4);
+            int userInput = valid1.getValue();
             if (userInput == 1)
             {
                 //Fight Menu
@@ -46,10 +50,39 @@ public class BattleMenu {
 
 
 
-                    }
-
+                 }
+                 //Done battle now P1 turn should end
                 p1Turn = false;
                 }
+                    if(userInput == 2)
+                    {
+                        //Change pokemon
+                        ChangePkmn change1 = new ChangePkmn(P1);
+
+                        if (change1.isCancel() == true){
+                            System.out.println("I cancled");
+
+                        }else if(change1.isCancel() == false){
+                        System.out.println("didn't cacnel");
+                            p1Turn = false; //If there no cancel, end the turn and start P2 turn
+                    }
+
+
+
+
+                    }
+//                    if (userInput == 3)
+////                    {
+                    //FOR SOME REASON WHEN I BATTLEE IT COMES DOWN HERE WHEN I DO 3 FOR IRON TAIL FIX LATER 9.10
+////                        System.out.println("A potion will recover 100HP for one pokemon");
+////                        P1.showPkmnList();
+////                        System.out.println("Pick a pokemon to use potion on");
+////                        valid1 = new ValidateIntInput(1,3);
+////                        userInput =valid1.getValue();
+////                        P1.getPkmnList(userInput).setHP(P1.getPkmnList(userInput).getHP()+100);
+////                        System.out.println( P1.getPkmnList(userInput).getName() + "recovers 100 HP! Current: "+ pokemon1.showHP());
+////
+////                    }
                 else if (userInput != 1) {
                 System.out.println("Sorry Option isn't available.");
                     valid1 = new ValidateIntInput();

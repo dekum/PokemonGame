@@ -3,6 +3,7 @@ import java.util.InputMismatchException;
 public class ValidateIntInput {
     private int value;
     private int value1;
+    private String cancel;
 
     public int getValue() {
         return value;
@@ -12,8 +13,7 @@ public class ValidateIntInput {
         this.value = value;
     }
 
-    ValidateIntInput(){
-
+    ValidateIntInput() {
 
 
         Scanner scanner = new Scanner(System.in);
@@ -23,10 +23,8 @@ public class ValidateIntInput {
         // loop, while the value is below
 
 
-
-        while(value <0 ||value>5  )
-        {
-            try{
+        while (value < 0 || value > 5) {
+            try {
 
                 System.out.print("Enter a number within the range:");
                 value = scanner.nextInt();
@@ -34,8 +32,7 @@ public class ValidateIntInput {
 
             // if the user types in anything but an integer,
             // it will 'throw' this 'exception'.
-            catch (InputMismatchException ime)
-            {
+            catch (InputMismatchException ime) {
                 System.err.println("Incorrect entry.");
                 // clear the keyboard buffer
                 scanner.nextLine();
@@ -45,8 +42,8 @@ public class ValidateIntInput {
         System.out.println("Your entry is:" + value);
 
     }
-    ValidateIntInput(int lowScopre, int highScope){
 
+    ValidateIntInput(int lowScopre, int highScope) {
 
 
         Scanner scanner = new Scanner(System.in);
@@ -56,10 +53,8 @@ public class ValidateIntInput {
         // loop, while the value is below
 
 
-
-        while(value <lowScopre ||value>highScope  )
-        {
-            try{
+        while (value < lowScopre || value > highScope) {
+            try {
 
                 System.out.print("Enter a number within the range:");
                 value = scanner.nextInt();
@@ -67,17 +62,17 @@ public class ValidateIntInput {
 
             // if the user types in anything but an integer,
             // it will 'throw' this 'exception'.
-            catch (InputMismatchException ime)
-            {
+            catch (InputMismatchException ime) {
                 System.err.println("Incorrect entry.");
                 // clear the keyboard buffer
                 scanner.nextLine();
             }
         }
 
-        System.out.println("Your entry is:" + value);
 
-    }
+            System.out.println("Your entry is:" + value);
+
+        }
 
 
 }

@@ -5,9 +5,21 @@ public class Player {
     private Pkmn[] Pkmnlist = new Pkmn[3];//Should be 2 but w/e
     private Pkmn currentPkmn;
 
-    public Pkmn getCurrentPkmn() {
-        return currentPkmn;
+    public void showPkmnList() {
+        for (int i =0; i<3; i++)
+        {
+
+            System.out.println((i+1)+ ". "+  Pkmnlist[i].getName() + " "+ Pkmnlist[i].showHP() );
+
+        }
+
     }
+
+    public Pkmn getCurrentPkmn() { return currentPkmn; }
+
+
+
+
 
     public void setCurrentPkmn(Pkmn currentPkmn) {
         this.currentPkmn = currentPkmn;

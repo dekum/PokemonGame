@@ -1,3 +1,6 @@
+import java.util.ArrayList;
+import java.util.List;
+
 public class Pkmn {
     private String name;
     private String type;
@@ -6,7 +9,17 @@ public class Pkmn {
     private int HPMax;
     private int atk;
     private int def;
+    private String Weakness;
+    List<String> weaknesses = new ArrayList<>();
     private PkmnMove[] pkmnMoveList = new PkmnMove[4];
+
+    public List<String> getWeaknesses() {
+        return weaknesses;
+    }
+
+    public void setWeaknesses(List<String> weaknesses) {
+        this.weaknesses = weaknesses;
+    }
 
     public String getSpecies() {
         return species;
@@ -23,9 +36,17 @@ public class Pkmn {
 
             System.out.println((i+1)+". "+ pkmnMoveList[i].getName());
 
+
         }
 
     }
+    public String showHP()
+    {
+        String output = HP+"/"+HPMax;
+        //System.out.println(HP+"/"+HPMax);
+        return output;
+    }
+
 
     public void setPkmnMoveList(PkmnMove[] pkmnMoveList) {
         this.pkmnMoveList = pkmnMoveList;
@@ -90,7 +111,7 @@ public class Pkmn {
         this.atk = ATK;
         this.def = DEF;
         this.species = species;
-        PkmnRegistry registry = new PkmnRegistry(species,pkmnMoveList);
+        PkmnRegistry registry = new PkmnRegistry(species,pkmnMoveList, weaknesses);
 
 
 

@@ -37,7 +37,7 @@ public class PkmnMoveRegistry {
 
         if (moveName == "Thunder") {
 
-            move1 = new PkmnMove("Thunder", "Electric", 25, "None");
+            move1 = new PkmnMove("Thunder", "Electric", 35, "None");
 
         }
 

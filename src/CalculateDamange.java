@@ -6,6 +6,7 @@ public class CalculateDamange {
     private int damange;
     private int atkVal;
     private int mulitipier;
+    private int numOfWeakness;
     private String specialAtr;
 
     public int getDamange() {
@@ -22,6 +23,24 @@ public class CalculateDamange {
         //but this is a sample so keep it here
         atkVal = moveUsed.getAtkVal();
         mulitipier = 1;
+
+        for (int i = 0; i<defPlayer.getWeaknesses().size();i++)
+        {
+            if (defPlayer.getWeaknesses().get(i) == moveUsed.getType() )
+                numOfWeakness++;
+
+        }
+        if (numOfWeakness == 1)
+        {
+            mulitipier= mulitipier * 2;
+
+        }
+        if (numOfWeakness == 2)
+        {
+            mulitipier= mulitipier * 4;
+
+        }
+
 
         damange = (atkPlayer.getAtk()*2 +  atkVal * mulitipier) - (defPlayer.getDef()/2);
         defPlayer.getDef();
