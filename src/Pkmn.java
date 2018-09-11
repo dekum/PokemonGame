@@ -104,6 +104,8 @@ public class Pkmn {
 
 
     Pkmn(String name, String type, int HP, int ATK, int DEF, String species){
+        //This builder initalizes the pokemon
+        //the program will send this module the stats the pokemon will have
         this.name= name;
         this.type = type;
         this.HP = HP;
@@ -111,6 +113,7 @@ public class Pkmn {
         this.atk = ATK;
         this.def = DEF;
         this.species = species;
+        //The pokemon registry will give the created pokemon it's movelist and weaknesses.
         PkmnRegistry registry = new PkmnRegistry(species,pkmnMoveList, weaknesses);
 
 
