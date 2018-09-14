@@ -1,0 +1,35 @@
+public class Item {
+    //All Itemss will be a obect of this class
+    //Items will have a name, arraylist of effects, amt healed, and quanitiy
+    //Item Objects willbe started in the Player calss
+    String name
+    int amtHealed;
+    Arraylist<String> effects = new arraylist<string>;
+    int quantity; //How many of this particular items a player owns
+    
+    public arraylist<string> GetEffects()
+    
+    
+    Item(String name){
+         //When you intilize Item all that is needed is a name, this module sets the item variabales on its own
+        this.name = name;
+        
+        if (name == "Potion")
+        {
+            amtHealed = 50;
+            effects.add("Heal HP";
+            
+        }
+        
+          if (name == "BurnHeal")
+        {
+            amtHealed = 0;
+            effects.add("Heal Burn";
+            
+        }
+         
+         
+         
+        }
+
+    }
