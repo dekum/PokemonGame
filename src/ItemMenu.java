@@ -12,13 +12,15 @@ public class ItemMenu {
 
   ItemMenu(Player P1){
     System.out.println("Item List");
+
     P1.showItemList();
+
     System.out.println("Choose the item you want to use, 0 to Cancel");
     ValidateIntInput valid1 = new ValidateIntInput(0,P1.getItemList().size());
     if (valid1.getValue() != 0)
     {
       int input1 = valid1.getValue();
-      Item itemUsed = P1.getItemList().get(input1);
+      Item itemUsed = P1.getItemInItemList(input1);
       //Now I have the item that the user choose
 
       //Need a pokemon Target
