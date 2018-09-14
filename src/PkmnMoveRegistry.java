@@ -71,6 +71,20 @@ public class PkmnMoveRegistry {
 
         }
 
+        if (moveName == "Rock Throw") {
+
+            move1 = new PkmnMove("Rock Throw", "Rock", 20, "None");
+
+        }
+        if (moveName == "Earthquake") {
+
+            move1 = new PkmnMove("Earthquake", "Ground", 35, "None");
+
+        }
+
+
+
+
         return move1;
 
     }

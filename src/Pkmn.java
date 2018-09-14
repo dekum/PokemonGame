@@ -1,3 +1,6 @@
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -104,6 +107,27 @@ public class Pkmn {
 
 
     Pkmn(String name, String type, int HP, int ATK, int DEF, String species){
+
+//        Connection conn = SQLiteJDBCDriverConnection.connect();
+//        java.sql.Statement stmt;
+//
+//        try {
+//            stmt = conn.createStatement();
+//            ResultSet rs = stmt.executeQuery("Select HP From PokemonRegistry");
+//            while (rs.next()) {
+//                System.out.println(rs.getString("HP"));
+//
+//
+//                //System.out.println("Group name: " + group);
+//            }
+//
+//        }
+//        catch(SQLException e) {
+//            System.out.println("sql exception caught");
+//            e.printStackTrace();
+//        }
+//        System.exit(0);
+
         this.name= name;
         this.type = type;
         this.HP = HP;

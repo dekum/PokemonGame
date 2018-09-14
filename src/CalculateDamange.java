@@ -3,6 +3,8 @@ public class CalculateDamange {
 
     //Using tackle attack value 10
 
+    //May need a better dmangae formula
+
     private int damange;
     private int atkVal;
     private int mulitipier;

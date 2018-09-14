@@ -1,9 +1,38 @@
+import java.util.ArrayList;
+
 public class Player {
     private String name;
     private String trainerClass;
     private int age;
     private Pkmn[] Pkmnlist = new Pkmn[3];//Should be 2 but w/e
     private Pkmn currentPkmn;
+    private ArrayList<Item> itemList = new ArrayList<Item>();
+
+    public void showItemList() {
+        for (int i = 0; i<itemList.size();i++)
+        {
+
+            System.out.println((i+1)+". " + itemList.get(i).getName() +" Amt: " +itemList.get(i).getQuantity());
+
+        }
+
+    }
+
+    public Pkmn[] getPkmnlist() {
+        return Pkmnlist;
+    }
+
+    public void setPkmnlist(Pkmn[] pkmnlist) {
+        this.Pkmnlist = pkmnlist;
+    }
+
+    public ArrayList<Item> getItemList() {
+        return itemList;
+    }
+
+    public void setItemList(ArrayList<Item> itemList) {
+        this.itemList = itemList;
+    }
 
     public void showPkmnList() {
         for (int i =0; i<3; i++)

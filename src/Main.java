@@ -13,6 +13,9 @@ Don't extended any futhur from there until its done
 
 
 */
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.Random;
 import java.util.Scanner;
 import java.util.InputMismatchException;
@@ -22,8 +25,12 @@ public class Main {
     public static void main(String[] args) {
         //Opening open1 = new Opening();
 
+
         Player P1 = new Player("Red","Trainer", 14);
         Player P2 = new Player("Blue","Master Trainer",15);
+        Item createItem = new Item("Potion");
+        P1.getItemList().add(createItem);
+        P1.getItemList().get(0).changeItemQuantity(1);
 
         Pkmn createPkmn = new Pkmn("Pikachu", "Electric", 200, 25, 15,"Pikachu");
         P1.setPkmnList(createPkmn,1);
@@ -44,7 +51,7 @@ public class Main {
         Pkmn Pokemon2 = P2.getPkmnList(1);
         Pokemon2.showPkmnMoveList();
 
-        createPkmn = new Pkmn("Geodude", "Rock", 420, 42, 39,"Geodude");
+        createPkmn = new Pkmn("Geodude", "Rock", 420, 28, 32,"Geodude");
         P2.setPkmnList(createPkmn,2);
 
 
@@ -73,7 +80,7 @@ public class Main {
 
 
         Pokemon1 = P1.getPkmnList(1);
-        Pokemon2 = P2.getPkmnList(1);
+        Pokemon2 = P2.getPkmnList(2);
         P1.setCurrentPkmn(Pokemon1);
         P2.setCurrentPkmn(Pokemon2);
 
