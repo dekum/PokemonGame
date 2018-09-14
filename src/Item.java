@@ -77,7 +77,8 @@ public class Item {
       {
         if (effects.get(i) == "Heal HP"){
           target.setHP(target.getHP()+item.getAmtHeal());
-          item.setMessage(target+" recovered " + item.getAmtHeal()+" HP! ");
+          item.setMessage(target.getName()+" recovered " + item.getAmtHeal()+" HP! ");
+          System.out.println(target.getName() +" Current HP: " + target.showHP());
 
         }
       }
