@@ -14,7 +14,7 @@ public class P2Turn {
         System.out.println(pokemon2.getName() + " is going to attack!");
         Random random = new Random();
         int randoomInt = random.nextInt(4) +1; //Random code includes 0 so range is 0,1,2,3 so I want to add 1 so range is 1 thru 4
-
+        randoomInt=4;
         PkmnMove moveUsed = pokemon2.getPkmnMoveList(randoomInt);
 
         System.out.println(pokemon2.getName() + " is using"+ moveUsed.getName()+ "!");

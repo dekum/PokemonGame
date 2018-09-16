@@ -34,20 +34,20 @@ public class Main {
 
 
 
-        Pkmn createPkmn = new Pkmn("Pikachu", "Electric", 200, 25, 15,"Pikachu");
+        Pkmn createPkmn = new Pkmn("Pikachu", "Electric", 141, 106, 81,"Pikachu");
         P1.setPkmnList(createPkmn,1);
 
 
 
 
-        createPkmn = new Pkmn("Charmander", "Fire", 150, 34, 29,"Charmander"); //think about adding a number at the end of createPkmn
+        createPkmn = new Pkmn("Charmander", "Fire", 200, 103, 94,"Charmander"); //think about adding a number at the end of createPkmn
         P1.setPkmnList(createPkmn,2);
         createPkmn = new Pkmn("Bulbasaur", "Fire", 123, 31, 29,"Bulbsaur"); //think about adding a number at the end of createPkmn
         P1.setPkmnList(createPkmn,3);
 
 
 
-        createPkmn = new Pkmn("Squirtle", "Water", 220, 25, 30,"Squirtle");
+        createPkmn = new Pkmn("Squirtle", "Water", 150, 99, 116,"Squirtle");
         P2.setPkmnList(createPkmn,1);
 
         Pkmn Pokemon2 = P2.getPkmnList(1);

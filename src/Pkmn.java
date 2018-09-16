@@ -145,7 +145,7 @@ public class Pkmn {
         this.atk = ATK;
         this.def = DEF;
         this.species = species;
-        PkmnRegistry registry = new PkmnRegistry(species,pkmnMoveList, weaknesses);
+        PkmnRegistry registry = new PkmnRegistry(species,pkmnMoveList, weaknesses, this);
 
 
 

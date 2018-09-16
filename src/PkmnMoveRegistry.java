@@ -15,12 +15,12 @@ public class PkmnMoveRegistry {
 
         if (moveName == "Ember") {
 
-            move1 = new PkmnMove("Ember", "Fire", 15, "None");
+            move1 = new PkmnMove("Ember", "Fire", 110, "None");
 
         }
         if (moveName == "Flamethrower") {
 
-            move1 = new PkmnMove("Flamethrower", "Fire", 35, "None");
+            move1 = new PkmnMove("Flamethrower", "Fire", 90, "None");
 
         }
 
@@ -39,35 +39,35 @@ public class PkmnMoveRegistry {
 
         if (moveName == "Hydro Pump") {
 
-            move1 = new PkmnMove("Hydro Pump", "Water", 25, "None");
+            move1 = new PkmnMove("Hydro Pump", "Water", 110, "None");
 
         }
 
         if (moveName == "Tackle") {
 
-            move1 = new PkmnMove("Tackle", "Normal", 10, "None");
+            move1 = new PkmnMove("Tackle", "Normal", 40, "None");
         }
         if (moveName == "Thunderbolt") {
 
-            move1 = new PkmnMove("Thunderbolt", "Normal", 15, "None");
+            move1 = new PkmnMove("Thunderbolt", "Normal", 90, "None");
 
         }
 
         if (moveName == "Thunder") {
 
-            move1 = new PkmnMove("Thunder", "Electric", 35, "None");
+            move1 = new PkmnMove("Thunder", "Electric", 110, "None");
 
         }
 
         if (moveName == "Water Gun") {
 
-            move1 = new PkmnMove("Water Gun", "Water", 15, "None");
+            move1 = new PkmnMove("Water Gun", "Water", 40, "None");
 
         }
 
-        if (moveName == "Withdrawl") {
+        if (moveName == "Withdraw") {
 
-            move1 = new PkmnMove("Withdrawl", "Steel", 0, "+15 Defense. No Attack");
+            move1 = new PkmnMove("Withdraw", "Steel", 0, "+15 Defense. No Attack");
 
         }
 

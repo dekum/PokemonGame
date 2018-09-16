@@ -20,33 +20,9 @@ public class CalculateDamange {
     }
 
     CalculateDamange(Pkmn atkPlayer, Pkmn defPlayer, PkmnMove moveUsed, String specialAtr){
-        //In here we are assuming P1 is attacking
-        //We we get serious in the code, THe multipler wont be initlziaed here
-        //but this is a sample so keep it here
-        atkVal = moveUsed.getAtkVal();
-        mulitipier = 1;
+        DamangeFormula dam1 = new DamangeFormula(moveUsed,atkPlayer, defPlayer);
 
-        for (int i = 0; i<defPlayer.getWeaknesses().size();i++)
-        {
-            if (defPlayer.getWeaknesses().get(i) == moveUsed.getType() )
-                numOfWeakness++;
-
-        }
-        if (numOfWeakness == 1)
-        {
-            mulitipier= mulitipier * 2;
-
-        }
-        if (numOfWeakness == 2)
-        {
-            mulitipier= mulitipier * 4;
-
-        }
-
-
-        damange = (atkPlayer.getAtk()*2 +  atkVal * mulitipier) - (defPlayer.getDef()/2);
-        defPlayer.getDef();
-        defPlayer.getHP();
+        damange = dam1.getDamangeFinal();
         System.out.println(damange);
         //Subtract damange from defending pkmn's hp
         //Before doing so check if moveUsed speical attrivute to see if it is a non attacking move
