@@ -30,6 +30,10 @@ public class Player {
         return itemList;
     }
 
+    public Item getItemInItemList( int id) {
+        return itemList.get(id-1);
+    }
+
     public void setItemList(ArrayList<Item> itemList) {
         this.itemList = itemList;
     }

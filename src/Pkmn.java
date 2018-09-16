@@ -12,9 +12,19 @@ public class Pkmn {
     private int HPMax;
     private int atk;
     private int def;
+    private int level;
+
     private String Weakness;
     List<String> weaknesses = new ArrayList<>();
     private PkmnMove[] pkmnMoveList = new PkmnMove[4];
+
+    public int getLevel() {
+        return level;
+    }
+
+    public void setLevel(int level) {
+        this.level = level;
+    }
 
     public List<String> getWeaknesses() {
         return weaknesses;

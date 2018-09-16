@@ -19,7 +19,7 @@ import java.sql.SQLException;
 import java.util.Random;
 import java.util.Scanner;
 import java.util.InputMismatchException;
-
+//This is a drover c;ass to test main operations
 public class Main {
 
     public static void main(String[] args) {
@@ -29,8 +29,10 @@ public class Main {
         Player P1 = new Player("Red","Trainer", 14);
         Player P2 = new Player("Blue","Master Trainer",15);
         Item createItem = new Item("Potion");
-        P1.getItemList().add(createItem);
-        P1.getItemList().get(0).changeItemQuantity(1);
+       P1.getItemList().add(createItem);
+        P1.getItemList().get(0).changeItemQuantity(3);
+
+
 
         Pkmn createPkmn = new Pkmn("Pikachu", "Electric", 200, 25, 15,"Pikachu");
         P1.setPkmnList(createPkmn,1);
@@ -80,7 +82,7 @@ public class Main {
 
 
         Pokemon1 = P1.getPkmnList(1);
-        Pokemon2 = P2.getPkmnList(2);
+        Pokemon2 = P2.getPkmnList(1);
         P1.setCurrentPkmn(Pokemon1);
         P2.setCurrentPkmn(Pokemon2);
 
